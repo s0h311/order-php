@@ -1,6 +1,6 @@
 FROM php:8.3.10-zts-bookworm
 
-RUN apt update
+RUN apt update -y
 
 # Install composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -14,7 +14,7 @@ RUN curl -sS https://get.symfony.com/cli/installer | bash
 RUN export PATH="$HOME/.symfony5/bin:$PATH"
 
 # Install Git
-RUN apt install git-all
+RUN apt install git-all -y
 
 CMD ["tail", "-f", "/dev/null"]
 

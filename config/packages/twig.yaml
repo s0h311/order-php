@@ -1,0 +1,10 @@
+twig:
+    file_name_pattern: ['*.twig', '*.html']
+    paths:
+        'src/Components': 'Components'
+        'src/Pages': 'Pages'
+        'src/Layouts': 'Layouts'
+
+when@test:
+    twig:
+        strict_variables: true
