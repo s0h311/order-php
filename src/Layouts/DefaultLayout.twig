@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <title>Potter</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+    {% endblock %}
+</head>
 <body>
-<main>
+<main class="mx-5 lg:mx-[10%]">
     {% block content %}{% endblock %}
 </main>
 </body>
