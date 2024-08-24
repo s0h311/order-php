@@ -1,7 +1,9 @@
 <twig:DefaultLayout>
-    <h1>
-        Some title
-    </h1>
+    <section class="h-full grid place-items-center">
+        <form class="flex items-center gap-5" action="/resultForAddress" method="get">
+            <twig:UI:Input autofocus placeholder="Address" name="address"/>
 
-    <twig:Cta title="Some Button"/>
+            <twig:UI:Cta type="submit">Continue</twig:UI:Cta>
+        </form>
+    </section>
 </twig:DefaultLayout>
