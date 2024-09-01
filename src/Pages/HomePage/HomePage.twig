@@ -1,0 +1,22 @@
+<twig:DefaultLayout>
+    <section class="h-full grid place-items-center">
+        <form class="flex items-center gap-5" action="/resultForAddress" method="get">
+            {#  <twig:Autocomplete name="address"/> #}
+
+            <div>
+                <twig:UI:Input
+                        autofocus
+                        placeholder="Address"
+                        name="address"
+                        autocomplete="off"
+                        oninput="$.get(`/address?q=${this.value}`, 'optionsList')"
+                />
+
+                <div id="optionsList">
+                </div>
+            </div>
+
+            <twig:UI:Cta type="submit">Continue</twig:UI:Cta>
+        </form>
+    </section>
+</twig:DefaultLayout>

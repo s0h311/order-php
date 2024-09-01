@@ -11,7 +11,8 @@ RUN mv composer.phar /usr/local/bin/composer
 
 # Install Symfony CLI
 RUN curl -sS https://get.symfony.com/cli/installer | bash
-RUN export PATH="$HOME/.symfony5/bin:$PATH"
+RUN echo 'export PATH="$HOME/.symfony5/bin:$PATH"' >> ~/.bashrc
+
 
 # Install Git
 RUN apt install git-all -y

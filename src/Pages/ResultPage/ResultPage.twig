@@ -1,0 +1,16 @@
+<twig:DefaultLayout>
+    <section class="h-full space-y-5">
+        {% for dish in dishes %}
+            <div class="flex items-center gap-5 bg-blue-400 w-fit"
+                 id="{{ dish.id }}"
+                 onclick="$.get('/getThing', '{{ dish.id }}')"
+            >
+                <div>{{ dish.id }}</div>
+                <div>{{ dish.name }}</div>
+                <div>{{ dish.price }}</div>
+            </div>
+        {% endfor %}
+
+        <button onclick="$.get('/getThing')">CLICK</button>
+    </section>
+</twig:DefaultLayout>
